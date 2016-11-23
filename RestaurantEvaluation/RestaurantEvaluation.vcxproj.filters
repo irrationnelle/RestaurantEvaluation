@@ -24,7 +24,7 @@
     <ClInclude Include="targetver.h">
       <Filter>헤더 파일</Filter>
     </ClInclude>
-    <ClInclude Include="RestaurantVO.h">
+    <ClInclude Include="RestaurantData.h">
       <Filter>헤더 파일</Filter>
     </ClInclude>
   </ItemGroup>
@@ -35,7 +35,7 @@
     <ClCompile Include="RestaurantEvaluation.cpp">
       <Filter>소스 파일</Filter>
     </ClCompile>
-    <ClCompile Include="RestaurantVO.cpp">
+    <ClCompile Include="RestaurantData.cpp">
       <Filter>소스 파일</Filter>
     </ClCompile>
   </ItemGroup>
