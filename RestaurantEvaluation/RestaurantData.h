@@ -9,7 +9,7 @@ public:
 	~RestaurantData();
 	
 	// restaurantName °ª set, get
-	void SetRestaurantName(std::string _restaurantName);
+	// void SetRestaurantName(std::string _restaurantName);
 	string GetRestaurantName(void);
 
 

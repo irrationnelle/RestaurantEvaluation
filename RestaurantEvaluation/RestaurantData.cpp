@@ -3,11 +3,11 @@
 
 using namespace std;
 
-RestaurantData::RestaurantData() {};
-	void RestaurantData::SetRestaurantName(string _restaurantName)
-	{
-		restaurantName = _restaurantName;
-	}
+RestaurantData::RestaurantData(std::string _restaurantName) restaurantName(_restaurantName) {};
+	// void RestaurantData::SetRestaurantName(string _restaurantName)
+	// {
+	// 	restaurantName = _restaurantName;
+	// }
 	
 	string RestaurantData::GetRestaurantName(void)
 	{
