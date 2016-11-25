@@ -1,3 +1,4 @@
+
 #include "stdafx.h"
 #include "RestaurantData.h"
 #include "Evaluate.h"
@@ -13,6 +14,14 @@ Evaluate* Evaluate::GetInstance()
         instance = new Evaluate();
     }
     return instance;
+}
+
+RestaurantData* Evaluate::createRestaurant(string name)
+{
+    RestaurantData* restaurant = new RestaurantData(name);
+    //Evaluate::restaurantList.push_back(restaurant);
+
+	return restaurant;
 }
 
 Evaluate::Evaluate() {}

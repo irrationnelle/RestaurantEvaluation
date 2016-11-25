@@ -5,19 +5,24 @@ using namespace std;
 class RestaurantData
 {
 public:
-	RestaurantData();
+	RestaurantData(string);
+	RestaurantData(const RestaurantData& rhs);
 	~RestaurantData();
 	
 	// restaurantName °ª set, get
 	// void SetRestaurantName(std::string _restaurantName);
-	string GetRestaurantName(void);
+	string GetRestaurantName(void) const;
 
 
 	// totalEvaluation °ª set, get
 	void SetTotalEvaluation(int _totalEvaluation);
-	int GetTotalEvaluation(void);
+	int GetTotalEvaluation(void) const;
+
+	void SetRegisterNum(int _registerNum);
+	int GetRegisterNum();
 	
 private:
+	int registerNum;
 	string restaurantName;
 	list<int> evaluationList;
 	list<int>::const_iterator evaluationConstIter;

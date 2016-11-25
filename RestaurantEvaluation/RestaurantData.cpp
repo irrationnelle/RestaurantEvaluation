@@ -3,13 +3,8 @@
 
 using namespace std;
 
-RestaurantData::RestaurantData(std::string _restaurantName) restaurantName(_restaurantName) {};
-	// void RestaurantData::SetRestaurantName(string _restaurantName)
-	// {
-	// 	restaurantName = _restaurantName;
-	// }
-	
-	string RestaurantData::GetRestaurantName(void)
+RestaurantData::RestaurantData(string _restaurantName) : restaurantName(_restaurantName) {};	
+	string RestaurantData::GetRestaurantName(void) const
 	{
 		return restaurantName;
 	}
@@ -19,9 +14,18 @@ RestaurantData::RestaurantData(std::string _restaurantName) restaurantName(_rest
 		totalEvaluation = _totalEvaluation;
 	}
 
-	int RestaurantData::GetTotalEvaluation(void)
+	int RestaurantData::GetTotalEvaluation(void) const
 	{
 		return totalEvaluation;
+	}
+
+	void RestaurantData::SetRegisterNum(int _registerNum)
+	{
+		registerNum = _registerNum;
+	}
+	int RestaurantData::GetRegisterNum()
+	{
+		return registerNum;
 	}
 	
 RestaurantData::~RestaurantData()

@@ -8,6 +8,7 @@ class Evaluate
 {
 public:
 	static Evaluate* GetInstance();
+    RestaurantData* createRestaurant(string);
 	
 private:
     // RestaurantData::RestaurantData restaurantData = nullptr;
@@ -18,5 +19,8 @@ private:
     ~Evaluate();
 
     static Evaluate* instance;
+
+    list<RestaurantData*> restaurantList;
+	list<RestaurantData*>::const_iterator restaurantIter;
 };
 
