@@ -44,9 +44,9 @@ void UserInterface::select()
 
 			if (cin.fail())
 			{
-				cout << "문자는 입력할 수 없습니다!" << endl; // 에러 메시지 출력
-				cin.clear(); // 오류스트림을 초기화
-				cin.ignore(256, '\n'); // 입력버퍼를 비움	
+				cout << "문자는 입력할 수 없습니다!" << endl;
+				cin.clear(); 
+				cin.ignore(256, '\n'); 
 			}
 			else
 			{
@@ -95,14 +95,14 @@ void UserInterface::select()
 				if (cin.fail())
 				{
 					cout << endl;
-					cout << "문자는 입력할 수 없습니다!" << endl; // 에러 메시지 출력
-					cin.clear(); // 오류스트림을 초기화
-					cin.ignore(256, '\n'); // 입력버퍼를 비움	
+					cout << "문자는 입력할 수 없습니다!" << endl;
+					cin.clear(); 
+					cin.ignore(256, '\n');
 				}
 				else if (idx > arryIdx || idx <= 0)
 				{
 					cout << endl;
-					cout << "지정된 숫자를 입력해주세요!" << endl; // 에러 메시지 출력
+					cout << "지정된 숫자를 입력해주세요!" << endl;
 				}
 				else
 				{
@@ -123,7 +123,7 @@ void UserInterface::select()
 				cout << endl;
 
 				cout << "평점을 선택하세요 : ";
-				//int score;
+				
 				cin >> score;
 				if (score <= 5 && score >= 1)
 				{
@@ -132,14 +132,14 @@ void UserInterface::select()
 				else if(cin.fail())
 				{
 					cout << endl;
-					cout << "문자는 입력할 수 없습니다!" << endl; // 에러 메시지 출력
-					cin.clear(); // 오류스트림을 초기화
-					cin.ignore(256, '\n'); // 입력버퍼를 비움	
+					cout << "문자는 입력할 수 없습니다!" << endl;
+					cin.clear(); 
+					cin.ignore(256, '\n');
 				}
 				else
 				{
 					cout << endl;
-					cout << "지정된 숫자를 입력해주세요!" << endl; // 에러 메시지 출력
+					cout << "지정된 숫자를 입력해주세요!" << endl;
 				}
 			}
 			
@@ -181,7 +181,7 @@ void UserInterface::select()
 				r = rand() % arryIdx;
 
 
-				if (arrayRestaurant[r]->GetEachScore() >= 3)
+				if (arrayRestaurant[r]->GetAvgEvaluation() >= 3)
 				{
 					cout << endl;
 					cout << "음식점 :" << arrayRestaurant[r]->GetRestaurantName() << endl;

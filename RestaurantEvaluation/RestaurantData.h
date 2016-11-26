@@ -8,22 +8,17 @@ public:
 	RestaurantData(string);
 	RestaurantData(const RestaurantData& rhs);
 	~RestaurantData();
-	
-	// restaurantName °ª set, get
-	// void SetRestaurantName(std::string _restaurantName);
+		
 	string GetRestaurantName(void) const;
-
-
-	// totalEvaluation °ª set, get
-	void SetTotalEvaluation(int _totalEvaluation);
-	double GetTotalEvaluation(void) const;
-
+		
 	void SetRegisterNum(int _registerNum);
 	int GetRegisterNum();
 
+	double GetAvgEvaluation();
+
 	void SetScoreCount(int score);
 
-	double GetEachScore(void);
+	void GetEachScore(void);
 	
 private:
 	int registerNum;
@@ -37,8 +32,7 @@ private:
 
 	double countPeople = 0;
 
-	//list<int> evaluationList;
-	//list<int>::const_iterator evaluationConstIter;
 	double totalEvaluation;
+	double avgEvaluation;
 };
 

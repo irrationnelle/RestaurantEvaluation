@@ -11,18 +11,11 @@ public:
     RestaurantData* createRestaurant(string);
 	
 private:
-    // RestaurantData::RestaurantData restaurantData = nullptr;
-	// int selectNum;
-
+    
     Evaluate();
     Evaluate(const Evaluate& other);
     ~Evaluate();
 
     static Evaluate* instance;
-
-	RestaurantData* arrayRestaurant[10];
-
-    list<RestaurantData*> restaurantList;
-	list<RestaurantData*>::const_iterator restaurantIter;
 };
 

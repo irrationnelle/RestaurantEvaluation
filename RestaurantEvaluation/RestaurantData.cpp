@@ -8,16 +8,7 @@ RestaurantData::RestaurantData(string _restaurantName) : restaurantName(_restaur
 	{
 		return restaurantName;
 	}
-
-	void RestaurantData::SetTotalEvaluation(int _totalEvaluation)
-	{
-		totalEvaluation = _totalEvaluation;
-	}
-
-	double RestaurantData::GetTotalEvaluation(void) const
-	{
-		return totalEvaluation;
-	}
+		
 
 	void RestaurantData::SetRegisterNum(int _registerNum)
 	{
@@ -27,6 +18,12 @@ RestaurantData::RestaurantData(string _restaurantName) : restaurantName(_restaur
 	{
 		return registerNum;
 	}
+		
+	double RestaurantData::GetAvgEvaluation()
+	{
+		return avgEvaluation;
+	}
+
 
 	void RestaurantData::SetScoreCount(int score)
 	{
@@ -55,10 +52,10 @@ RestaurantData::RestaurantData(string _restaurantName) : restaurantName(_restaur
 		countPeople++;
 	}
 
-	double RestaurantData::GetEachScore()
+	void RestaurantData::GetEachScore()
 	{
 		totalEvaluation = (5 * countFive) + (4 * countFour) + (3 * countThree) + (2 * countTwo) + (1 * countOne);
-		double avgEvaluation=0;
+		avgEvaluation=0;
 
 		if (countPeople == 0)
 		{
@@ -74,11 +71,7 @@ RestaurantData::RestaurantData(string _restaurantName) : restaurantName(_restaur
 		cout << "4점 : " << countFour << "명" << endl;
 		cout << "3점 : " << countThree << "명" << endl;
 		cout << "2점 : " << countTwo << "명" << endl;
-		cout << "1점 : " << countOne << "명" << endl;
-
-		return avgEvaluation;
-
-		
+		cout << "1점 : " << countOne << "명" << endl;		
 	}
 	
 RestaurantData::~RestaurantData()

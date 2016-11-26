@@ -19,8 +19,7 @@ Evaluate* Evaluate::GetInstance()
 RestaurantData* Evaluate::createRestaurant(string name)
 {
     RestaurantData* restaurant = new RestaurantData(name);
-    //Evaluate::restaurantList.push_back(restaurant);
-
+   
 	return restaurant;
 }
 
