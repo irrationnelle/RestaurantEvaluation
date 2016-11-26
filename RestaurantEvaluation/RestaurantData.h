@@ -16,16 +16,29 @@ public:
 
 	// totalEvaluation °ª set, get
 	void SetTotalEvaluation(int _totalEvaluation);
-	int GetTotalEvaluation(void) const;
+	double GetTotalEvaluation(void) const;
 
 	void SetRegisterNum(int _registerNum);
 	int GetRegisterNum();
+
+	void SetScoreCount(int score);
+
+	double GetEachScore(void);
 	
 private:
 	int registerNum;
 	string restaurantName;
-	list<int> evaluationList;
-	list<int>::const_iterator evaluationConstIter;
-	int totalEvaluation;
+
+	int countOne=0;
+	int countTwo=0;
+	int countThree=0;
+	int countFour=0;
+	int countFive=0;
+
+	double countPeople = 0;
+
+	//list<int> evaluationList;
+	//list<int>::const_iterator evaluationConstIter;
+	double totalEvaluation;
 };
 

@@ -6,7 +6,7 @@ class UserInterface
 {
 public:
 	static UserInterface* GetInstance();
-	void select(list<RestaurantData*>&);
+	void select();
 
 private:
 	UserInterface();

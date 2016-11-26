@@ -13,14 +13,9 @@ using namespace std;
 int _tmain(int argc, _TCHAR* argv[])
 {	
 	UserInterface* u = UserInterface::GetInstance();
-	list<RestaurantData*> restaurantList;
-	list<RestaurantData*>::const_iterator restaurantConstIter;
-	for (int i = 0; i < 5; i++)
-	{
-		u->select(restaurantList);
-	}
 	
-
+	u->select();
+		
 	return 0;
 }
 

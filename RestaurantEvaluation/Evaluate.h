@@ -20,6 +20,8 @@ private:
 
     static Evaluate* instance;
 
+	RestaurantData* arrayRestaurant[10];
+
     list<RestaurantData*> restaurantList;
 	list<RestaurantData*>::const_iterator restaurantIter;
 };
